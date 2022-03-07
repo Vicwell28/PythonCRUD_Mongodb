@@ -1,9 +1,9 @@
 import os
-from InterfaceAnimal import *
+from InterfacePersona import *
 
 class Main():
     def __init__(self):
-        self.InterfaceAnimal = MenuAnimal()
+        self.InterfacePersona = MenuPersona()
 
     def cls(self):
         os.system('cls' if os.name == 'nt' else 'clear')
@@ -16,7 +16,7 @@ class Main():
             print("P) Peronas\n0) Salir")
             a = input("Selecciona una opción: ")
             if (a.upper() == 'P'):
-                self.InterfaceAnimal.menu()
+                self.InterfacePersona.menu()
             elif (a == '0'):
                 break;
             else:

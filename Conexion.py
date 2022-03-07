@@ -1,5 +1,9 @@
 import pymongo
 
-myclient = pymongo.MongoClient('mongodb+srv://user11:Candela50@sandbox.mg1tw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+myclient = pymongo.MongoClient('mongodb+srv://VicWell:vicwell@sandbox.rwi8f.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
 
-print(myclient)
+mydb = myclient["BaseDeDatosAnimales"]
+
+mycol = mydb["Personas"]
+
+

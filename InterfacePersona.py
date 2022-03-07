@@ -1,9 +1,9 @@
 import os
-from Animal import * 
-class MenuAnimal():
+from Persona import * 
+class MenuPersona():
 
     def __init__(self):
-        self.Animal = Animal()
+        self.Persona = Persona()
 
     def cls(self):
         os.system('cls' if os.name == 'nt' else 'clear')
@@ -12,7 +12,7 @@ class MenuAnimal():
         a = 10;
         while a != 0:
             self.cls()
-            print("¿Que Quieres Hacer\nC) Insertar Animal \nR) Mostrar Animales\nU) Actualizar Animal\nD) Eliminar Animal\n0) Salir")
+            print("¿Que Quieres Hacer\nC) Insertar Persona \nR) Mostrar Personaes\nU) Actualizar Persona\nD) Eliminar Persona\n0) Salir")
 
             op = input("Respuesta: ")
 
@@ -22,13 +22,15 @@ class MenuAnimal():
                 a = 10;
                 while a != 0:
                     self.cls()
-                    print("Opcion Mostrar Animales\n1) Mostar Por Id\n2) Mostrar Todos Los Animales\b0) Salir")
+                    print("Opcion Mostrar Personaes\n1) Mostar Por Id\n2) Mostrar Todos Los Personaes\n0) Salir")
                     R = input("Respuesta: ")
                     if R.upper() == "1":
                         self.menuFind()
+                        input("Enter Para Continuar...")
                     elif R.upper() == "2":
                         
                         self.menuAll()
+                        input("Enter Para Continuar...")
                     elif R == "0":
                         break
                     else:
@@ -52,17 +54,17 @@ class MenuAnimal():
         type = input("Tipo: ") 
         age = input("Edad: ")
         gender = input("Genero: ")
-        self.Animal.CreateAnimal(name, type, age, gender)
+        self.Persona.CreatePersona(name, type, age, gender)
 
     def menuFind(self):
         name = input("Nombre: ")
-        self.Animal.LeerAnimal(name)
+        self.Persona.LeerPersona(name)
 
     def menuAll(self):
-        self.Animal.LeerAnimales()
+        self.Persona.LeerPersonaes()
 
     def menuEliminar(self):
-        self.Animal.EliminarAnimal()
+        self.Persona.EliminarPersona()
 
     def menuModificar(self):
-        self.Animal.ModificarAnimal()
+        self.Persona.ModificarPersona()
